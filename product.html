@@ -317,9 +317,19 @@ body:not(.cream) .need{outline-color:rgba(216,184,148,.5);}
 body:not(.cream) #playbook-product h2.head{color:#faf9f5 !important;font-weight:700 !important;}
 /* hero shows the shared body glow (its own gradient removed) so it matches the section below */
 body:not(.cream) .hero{background:transparent!important;}
-/* hero stays dark (image + scrim) in BOTH modes; give it a dark backdrop for cream */
-body.cream .hero{background-color:#141009;}
-body.cream .hero .hero-scrim{background:linear-gradient(90deg,rgba(18,13,6,.82) 0%,rgba(18,13,6,.5) 42%,rgba(18,13,6,.12) 70%,transparent 100%),linear-gradient(180deg,rgba(18,13,6,.2),transparent 25%);}
+/* cream colorway: hero + breakup switch to the light look like the rest of the page */
+body.cream .hero{background-color:#faf6ec;}
+body.cream .hero .hero-scrim{background:linear-gradient(90deg,rgba(250,246,236,.92) 0%,rgba(250,246,236,.55) 42%,rgba(250,246,236,.05) 70%,transparent 100%),linear-gradient(180deg,rgba(250,246,236,.3),transparent 25%);}
+body.cream .hero-bg{filter:saturate(.98);}
+body.cream .hero-h1{color:#202020;text-shadow:none;}
+body.cream .hero-sub{color:#4a4540;}
+body.cream .hero-sub strong{color:#202020;}
+body.cream .breakup{background:#f3ecdb!important;}
+body.cream .breakup .bk-scrim{background:radial-gradient(120% 105% at 10% 50%,rgba(243,236,219,.94),rgba(243,236,219,.5) 44%,transparent 72%);}
+body.cream .breakup h2{color:#202020;}
+body.cream .breakup h2 .hl{color:#b8860b;}
+body.cream .breakup p{color:#4a4540;}
+body.cream .breakup .eyebrow{color:#b89243;}
 
 /* ===== seam glows (yellow bleeds), matches homepage ===== */
 .gz{position:relative;}
