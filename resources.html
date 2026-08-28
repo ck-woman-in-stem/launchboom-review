@@ -294,7 +294,7 @@ body.cream .lbnav-burger span{color:rgba(32,32,32,.75);}
   tbtns.forEach(function(b){b.addEventListener('click',function(){
     var cream=b.dataset.t==='cream';
     document.body.classList.toggle('cream',cream);
-    document.documentElement.setAttribute('data-scheme', cream?'cream':'dark');
+    document.documentElement.setAttribute('data-scheme', cream?'warm':'dark');
     tbtns.forEach(function(x){x.classList.toggle('on',(x.dataset.t==='cream')===cream);});
   });});
 })();
