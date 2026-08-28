@@ -96,7 +96,7 @@ body.cream .lbnav-burger span{color:rgba(32,32,32,.75);}
   tbtns.forEach(function(b){b.addEventListener('click',function(){
     var cream=b.dataset.t==='cream';
     document.body.classList.toggle('cream',cream);
-    document.documentElement.setAttribute('data-scheme', cream?'cream':'dark');
+    document.documentElement.setAttribute('data-scheme', cream?'warm':'dark');
     tbtns.forEach(function(x){x.classList.toggle('on',(x.dataset.t==='cream')===cream);});
   });});
 })();
@@ -2258,7 +2258,7 @@ body.cream .lbnav-burger span{color:rgba(32,32,32,.75);}
 #closing .cta{ padding-top:clamp(48px,5vw,70px)!important; padding-bottom:clamp(36px,4vw,52px)!important; }
 #closing .book{ padding-top:clamp(40px,4.4vw,58px)!important; padding-bottom:clamp(48px,5vw,70px)!important; }
 /* (4) ONE continuous dark ground; the dark sections go transparent over it */
-body{ background:linear-gradient(180deg,#1b1a16 0%,#191510 50%,#141009 100%) !important; }
+body:not(.cream){ background:linear-gradient(180deg,#1b1a16 0%,#191510 50%,#141009 100%) !important; }
 #darkzone{ background:transparent !important; }
 #verticals,#phones,#expert,#playbook,#faq,#launchkit,#launchkit .lk,#testimonials,#testimonials .tm,
 #closing,#closing .cta,#closing .book,#closing .foot,#closing .team,#darkzone #expert,#darkzone #phones{ background:transparent !important; }
