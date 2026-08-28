@@ -143,6 +143,8 @@ body.cream .themetog button{color:#7C5C3F;}
 .hero-banner.light{display:none;}
 body.cream .hero-banner.dark{display:none;}
 body.cream .hero-banner.light{display:block;}
+/* mobile hero image is a tighter crop with the XEBEC label/caption right at its edges: no top fade (keep labels crisp), gentle bottom fade only */
+@media(max-width:600px){.hero-banner{-webkit-mask-image:linear-gradient(to bottom,#000 0,#000 88%,transparent 100%)!important;mask-image:linear-gradient(to bottom,#000 0,#000 88%,transparent 100%)!important;}}
 .hero-content{position:absolute;top:6%;left:0;right:0;z-index:2;max-width:900px;margin:0 auto;padding:0 20px;}
 .hero-h1{font-weight:700;font-size:clamp(26px,4.2vw,54px);color:#fff;letter-spacing:-.02em;line-height:1.06;margin-bottom:10px;text-shadow:0 2px 24px rgba(0,0,0,.35);}
 .hero-h1 .marker{display:inline;background:#E8A816;color:#1c1200;padding:.02em .2em;border-radius:6px;-webkit-box-decoration-break:clone;box-decoration-break:clone;}

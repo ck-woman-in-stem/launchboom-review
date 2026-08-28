@@ -100,7 +100,7 @@ body.cream .lbnav-burger span{color:rgba(32,32,32,.75);}
   tbtns.forEach(function(b){b.addEventListener('click',function(){
     var cream=b.dataset.t==='cream';
     document.body.classList.toggle('cream',cream);
-    document.documentElement.setAttribute('data-scheme', cream?'cream':'dark');
+    document.documentElement.setAttribute('data-scheme', cream?'warm':'dark');
     tbtns.forEach(function(x){x.classList.toggle('on',(x.dataset.t==='cream')===cream);});
   });});
 })();
@@ -181,6 +181,8 @@ body.cream .hero .hero-fade{background:linear-gradient(180deg,transparent 0%,rgb
 
 /* ===== breakup / feature band (brand-dark + floating box cutout) ===== */
 .breakup{position:relative;width:100%;min-height:560px;display:flex;align-items:center;overflow:hidden;background:transparent;}
+/* big-monitor fix: cap the two left/right sections so their columns don't drift to opposite edges leaving a void (no effect <=1600px) */
+.hero,.breakup{max-width:1600px;margin-left:auto;margin-right:auto;}
 .breakup-inner{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:80px 40px;width:100%;display:flex;justify-content:flex-end;}
 .breakup-copy{max-width:500px;}
 .breakup .eyebrow{color:#D8B894;margin-bottom:22px;}
